@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Empresarial</title>
+    <link rel="stylesheet" href="pagina.css">
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: '.googleapis',sans-serif;
+    background-color:#000000;
+}
+
+img{
+    max-width: 100;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding: 50px 0 0 0;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #E22717;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Bebas neve' sans-serif;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: #E22717;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+.header-txt{
+    flex-basis: 50%;
+}
+
+.header-txt h1{
+    font-size: 100px;
+    line-height: 1;
+    font-family: 'Bebas Neve', sans-serif;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+p{
+    color: #d0d0d0;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 13px 35px;
+    background-color: #E22717;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 25px;
+}
+
+.btn-1:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.header-img{
+    text-align: right;
+    flex-basis: 50%;
+}
+
+.header-img img{
+    width: 550px;
+}
+
+.information{
+    padding: 50px 0;
+}
+
+.information-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.information-box{
+    flex-basis: 50%;
+    display: flex;
+}
+
+.card-1{
+    flex-basis: calc(50% - 100px);
+    background-color: #E22717;
+    border-radius: 25px;
+    margin-right: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-1 img{
+    width: 150px;
+    margin-top: -70px;
+}
+
+.card-1 h3{
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.card-1 p{
+    margin-bottom: 10px;
+}
+
+.card-1 span{
+    color: #E22717;
+    font-weight: 700;
+}
+
+.information-txt{
+    flex-basis: 50%;
+}
+
+h2{
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.general{
+    padding: 50px;
+}
+
+.general-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.general-txt{
+    flex-basis: 50%;
+    margin: 0 50px;
+}
+
+.general-img{
+    text-align: center;
+    flex-basis: 50%;
+}
+
+.app{
+    padding: 50px 0;
+}
+
+.app-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-img{
+    flex-basis: 50px;
+    text-align: center;
+}
+
+.app-img img{
+    width: 300px;
+}
+
+.app-txt{
+    flex-basis: 50%;
+}
+
+.app-icons img{
+    width: 150px;
+}
+
+.contact{
+    padding: 50px 0;
+}
+
+.contact-content{
+    text-align: center;
+    padding: 0 100px;
+}
+
+.footer{
+    padding: 100px 0 50px 0;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3{
+    color: #ffffff;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.link a{
+    font-size: 17px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.link a:hover{
+    color: #E22717;
+}
+
+
+
+@media(max-width:991px){
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 180px;
+        left: 0;
+        right: 0;
+        background-color: #FF8D4C;
+        display: none;
+    }
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header{
+        min-height: 0vh;
+        padding: 80px 0 30px 0;
+    }
+
+    .header-content{
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .header-txt{
+        margin-bottom: 35px;
+    }
+
+    .header-txt h1{
+        font-size: 80px;
+        margin-bottom: 25px;
+    }
+
+    .header-img{
+        text-align: center;
+    }
+
+    .header-img img{
+        padding: 20px;
+    }
+
+    .information{
+        padding: 20;
+    }
+
+    .information-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .information-box{
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .card-1{
+        flex-basis: calc(50% - 20px);
+        margin-right: 10px;
+        padding: 20px;
+    }
+
+    .general{
+        padding: 0 20px;
+    }
+
+    .general-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .general-txt{
+        margin: 0 0 20px 0;
+    }
+
+    .general-img{
+        order: 2;
+    }
+
+    .app{
+        padding: 20px;
+    }
+
+    .app-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-txt{
+        margin-bottom: 25px;
+    }
+
+    .app-img{
+        order: 2;
+    }
+
+    .app-img img{
+        width: 50%;
+    }
+
+    .contact{
+        padding: 20px;
+    }
+
+    .contact-content{
+        padding: 0;
+    }
+
+    .footer{
+        padding: 20px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header class="header" >
+
+        <div class="menu container">
+            <a href="#" class="logo">Comite Estudiantil</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="imagenes/menu-white.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="amenazas.html">Amenazas</a></li>
+                    <li><a href="organigrama.html">Organigrama</a></li>
+                    <li><a href="competidores.html">Competidores</a></li>
+                    <li><a href="foda.html">Foda</a></li>
+                    <li><a href="analizis.html">Analisis</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt">
+                <h1>Vision</h1>
+                <p>Lograr de la institución un lugar seguro para todos los que la conforman obteniendo un prestigio que se caracterice por valores y ética profesional.</p>
+                <h1>Mision</h1>
+                <p>Dar voz a todas aquellas situaciones que se deben de atender por derecho y necesidad de los estudiantes.  </p>
+                <h1>Proposito</h1>
+                <p>Cumplir con todas las necesidades que formaran el crecimiento de la institución.</p>
+            </div>
+            <div class="header-img">
+                <img src="imagenes/voz.jpg" alt="">
+            </div>
+        </div>
+        
+    </header>
+
+    <section class="Informarcion">
+
+        <div class="Informarcion container">
+            <div class="Informarcion-txt">
+                <h2>Funcion</h2>
+                <p>Esta plataforma digital sirve como un punto de encuentro virtual, diseñado para amplificar las voces de los alumnos, 
+                    promoviendo la participación activa, el debate respetuoso y la muestra de las diversas actividades culturales, deportivas, 
+                    científicas y sociales que se gestan dentro de la institución.
+                </p>
+                <p>Con el intercambio de información y la interacción social a través de tecnologías de la información y la comunicación (TICs). </p>
+                <h2>valores</h2>
+                <p> • Respeto</p>
+                <p> • Solidaridad  </p>
+                <p> • Honestidad  </p>
+                <p> • Compromiso </p>
+                <p> • Responsabilidad </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="general">
+
+        <div class="genearal-content container">
+
+            <div class="general-img">
+                <img src="#" alt="">
+            </div>
+
+            <div class="general-txt">
+                <h2>Teoría de la Expresión y Creatividad Estudiantil </h2>
+                <p>La expresión no es solo un derecho, sino un componente esencial del desarrollo integral, especialmente en el ámbito educativo.</p>
+                <p>Un espacio para discusiones específicas (por carrera o tema) y para que la comunidad estudiantil proponga ideas directamente a 
+                    la administración o a sociedades de alumnos.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="app">
+        <div class="app-content container">
+            <div class="app-img">
+                <img src="imagenes/equidad.jpg" alt="">
+            </div>
+            <div class="app-txt">
+                <h2>Problemática</h2>
+                <p>A pesar de ser una institución líder en formación tecnológica, 
+                    el TecNM Campus Chicoloapan enfrenta desafíos comunes a grandes comunidades 
+                    educativas en relación con la comunicación interna, 
+                    la participación y la visibilidad de las actividades estudiantiles.
+                </p>
+                <div class="app-icons">
+                    <img src="imagenes/desigualdad.jpg" alt="">
+                    <img src="imagenes/desigualdad genero.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact-content container">
+            <h2>Interaccion</h2>
+            <p>Los estudiantes aprenden al interactuar con las perspectivas de otros, 
+                promoviendo una cultura de interdisciplinariedad y respeto por 
+                la diversidad de pensamiento en un ambiente tecnológico. 
+            </p>
+            <a href="#" class="btn-1">Informarcion</a>
+        </div>
+    </section>
+</body>
+</html>
